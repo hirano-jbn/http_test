@@ -1,0 +1,36 @@
+<h3>Create data</h3>
+<div>
+  <input [(ngModel)]="siteName" placeholder="SiteName">
+</div>
+<div>
+  <input [(ngModel)] ="siteURL" placeholder="SiteURL">
+</div>
+<button (click) = "createData()">Create</button>
+
+<hr>
+<h3>Read data</h3>
+<ul>
+  <li *ngFor="let site of sites">
+    {{site.id}} {{site.name}} {{site.url}}
+  </li>
+</ul>
+
+<h3>Update data</h3>
+<div>
+  <input [(ngModel)]="updateId" placeholder="ID">
+</div>
+<div>
+  <input [(ngModel)]="updateName" placeholder="Site Name">
+</div>
+<div>
+  <input [(ngModel)]="updateURL" placeholder="Site URL">
+</div>
+  <button (click)="updateData()">Update</button>
+
+<hr>
+
+<h3>Delete data</h3>
+<div>
+  <input [(ngModel)]="deleteId" placeholder="ID">
+</div>
+<button (click)="deleteData()">Delete</button>
